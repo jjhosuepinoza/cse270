@@ -81,3 +81,4 @@ class TestSmokeTest():
     elements = self.driver.find_elements(By.NAME, "email")
     assert len(elements) > 0
   
+#test
