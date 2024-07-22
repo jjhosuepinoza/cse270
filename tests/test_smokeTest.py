@@ -19,7 +19,7 @@ class TestSmokeTest():
     self.driver.quit()
   
   def test_homePage(self):
-    self.driver.get("http://127.0.0.1:8000/teton/1.6/index.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/index.html")
     self.driver.set_window_size(1552, 832)
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
     assert len(elements) > 0
@@ -38,7 +38,7 @@ class TestSmokeTest():
     self.driver.find_element(By.CSS_SELECTOR, ".join-wizard-main").click()
   
   def test_adminPage(self):
-    self.driver.get("http://127.0.0.1:8000/teton/1.6/admin.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/admin.html")
     self.driver.set_window_size(782, 823)
     elements = self.driver.find_elements(By.ID, "username")
     assert len(elements) > 0
@@ -50,7 +50,7 @@ class TestSmokeTest():
     self.driver.find_element(By.CSS_SELECTOR, ".footer-content").click()
   
   def test_directoryPage(self):
-    self.driver.get("http://127.0.0.1:8000/teton/1.6/directory.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/directory.html")
     self.driver.set_window_size(784, 817)
     self.driver.find_element(By.ID, "directory-grid").click()
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".gold-member:nth-child(9)")
@@ -62,7 +62,7 @@ class TestSmokeTest():
     self.driver.find_element(By.LINK_TEXT, "Join").click()
   
   def test_joinPage(self):
-    self.driver.get("http://127.0.0.1:8000/teton/1.6/join.html")
+    self.driver.get("http://127.0.0.1:5500/teton/1.6/join.html")
     self.driver.set_window_size(782, 823)
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
